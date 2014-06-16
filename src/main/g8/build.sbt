@@ -14,7 +14,7 @@ val ScalacheckVersion = "1.11.4"
 
 libraryDependencies ++= Seq(
   "com.typesafe" %  "config" % TypesafeConfigVersion,
-  "org.scalatest" % "scalatest" %% ScalatestVersion % "test",
+  "org.scalatest" %% "scalatest" % ScalatestVersion % "test",
   "org.scalacheck" %% "scalacheck" % ScalacheckVersion % "test"
 )
 
