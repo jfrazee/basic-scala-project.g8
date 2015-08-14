@@ -1,16 +1,21 @@
-import com.typesafe.sbt.SbtStartScript
-
 name := "$name$"
 
 organization := "$organization$"
 
 version := "$version$"
 
-scalaVersion := "2.10.4"
+scalaVersion := "$scala_version$"
 
-val TypesafeConfigVersion = "1.2.0"
-val ScalatestVersion = "2.1.7"
-val ScalacheckVersion = "1.11.4"
+resolvers ++= Seq(
+  DefaultMavenRepository,
+  Resolver.bintrayRepo("typesafe", "releases"),
+  Resolver.sonatypeRepo("releases"),
+  Resolver.mavenLocal
+)
+
+val TypesafeConfigVersion = "1.3.0"
+val ScalatestVersion = "2.2.4"
+val ScalacheckVersion = "1.12.4"
 
 libraryDependencies ++= Seq(
   "com.typesafe" %  "config" % TypesafeConfigVersion,
@@ -18,8 +23,13 @@ libraryDependencies ++= Seq(
   "org.scalacheck" %% "scalacheck" % ScalacheckVersion % "test"
 )
 
+lazy val root = (project in file(".")).
+  enablePlugins(BuildInfoPlugin).
+  settings(
+    buildInfoKeys := Seq[BuildInfoKey](name, version, scalaVersion, sbtVersion),
+    buildInfoPackage := "$organization$.$name;format="lower,word"$"
+  )
+
 initialCommands := "import $organization$.$name;format="lower,word"$._"
 
 scalariformSettings
-
-seq(SbtStartScript.startScriptForClassesSettings: _*)
