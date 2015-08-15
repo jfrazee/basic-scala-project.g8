@@ -1,25 +1,43 @@
-This is a [giter8](https://github.com/n8han/giter8) template for generating a new scala project. It comes bundled with:
+# basic-scala-project.g8
+
+A [giter8](https://github.com/n8han/giter8) template for generating a new Scala project.
+
+## Overview
+
+The giter8 template is configured for sbt 0.13.8 and scala 2.11.6 and includes:
 
 * `main` and `test` source directories
+* [Typesafe Config](https://github.com/typesafehub/config)
 * [ScalaTest](http://www.scalatest.org/)
-* Scalacheck
-* SBT configuration for `0.13.2`, `Scala 2.10.4`, and `ScalaTest 2.0` dependencies
-* project `name`, `organization` and `version` customizable as variables
+* [ScalaCheck](https://www.scalacheck.org)
+* [sbt-scalariform](https://github.com/sbt/sbt-scalariform)
+* [sbt-buildinfo](https://github.com/sbt/sbt-buildinfo)
+* [sbt-extras](https://github.com/paulp/sbt-extras) sbt build script
+* [Maven Central](http://search.maven.org), [Typesafe](https://bintray.com/typesafe) and [Sonatype](http://central.sonatype.org) resolvers
 
-## CHANGELOG
+These variables can be modified when the template is applied:
 
-### 0.1.3
-* Scala 2.10.4
-* Sbt 0.13.2
+* `name`
+* `organization`
+* `version`
+* `scala_version`
+* `description`
+* `github_id`
+* `developer_url`
+* `project_url`
 
-### 0.1.2
-* Scala 2.10.3
+## Basic Usage
 
-### 0.1.1
-* Scalatest 1.9.2 for testing
-* Sbt 0.13.0
+To get started using the template:
 
-### 0.1.0 (Initial release!)
-* Scalatest 1.9.1 for testing
-* Sbt 0.12.4
-* Scala 2.10.2
+```
+brew install giter8
+g8 jfrazee/basic-scala-project.g8
+cd [PROJECT] && chmod 755 sbt
+```
+
+## Changelog
+
+### 0.0.1
+
+* Forked from [fayimora/basic-scala-project.g8](https://github.com/fayimora/basic-scala-project.g8)
