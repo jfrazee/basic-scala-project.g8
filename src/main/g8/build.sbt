@@ -27,6 +27,19 @@ lazy val root = (project in file(".")).
     buildInfoKeys := Seq[BuildInfoKey](name, version, scalaVersion, sbtVersion),
     buildInfoPackage := "$organization$.$name;format="lower,word"$"
   )
+  
+scalacOptions ++= Seq(
+  "-deprecation",
+  "-encoding", "UTF-8",
+  "-feature",
+  "-unchecked",
+  "-Xfatal-warnings",
+  "-Xlint",
+  "-Yno-adapted-args",
+  "-Ywarn-numeric-widen",
+  "-Ywarn-value-discard",
+  "-Xfuture"
+)  
 
 initialCommands := "import $organization$.$name;format="lower,word"$._"
 
