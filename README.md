@@ -38,6 +38,10 @@ cd [PROJECT] && chmod 755 sbt
 
 ## Changelog
 
+### 0.0.2
+
+* Added empty reference.conf to resources
+
 ### 0.0.1
 
 * Forked from [fayimora/basic-scala-project.g8](https://github.com/fayimora/basic-scala-project.g8)
