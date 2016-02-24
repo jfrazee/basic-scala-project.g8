@@ -25,9 +25,9 @@ lazy val root = (project in file(".")).
   enablePlugins(BuildInfoPlugin).
   settings(
     buildInfoKeys := Seq[BuildInfoKey](name, version, scalaVersion, sbtVersion),
-    buildInfoPackage := "$organization$.$name;format="lower,word"$"
+    buildInfoPackage := "$organization$.$name;format="word,lower"$"
   )
-  
+
 scalacOptions ++= Seq(
   "-deprecation",
   "-encoding", "UTF-8",
@@ -39,8 +39,8 @@ scalacOptions ++= Seq(
   "-Ywarn-numeric-widen",
   "-Ywarn-value-discard",
   "-Xfuture"
-)  
+)
 
-initialCommands := "import $organization$.$name;format="lower,word"$._"
+initialCommands := "import $organization$.$name;format="word,lower"$._"
 
 scalariformSettings

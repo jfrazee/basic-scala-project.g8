@@ -1,4 +1,4 @@
-package $organization$.$name;format="lower,word"$
+package $organization$.$name;format="word,lower"$
 
 import org.scalatest.FunSpec
 
@@ -9,4 +9,3 @@ class HelloWorldSpec extends FunSpec {
     }
   }
 }
-
