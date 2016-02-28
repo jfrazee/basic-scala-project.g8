@@ -4,7 +4,7 @@ A [giter8](https://github.com/n8han/giter8) template for generating a new Scala 
 
 ## Overview
 
-The giter8 template is configured for sbt 0.13.8 and scala 2.11.6 and includes:
+The giter8 template is configured for sbt 0.13.11 and scala 2.11.7 and includes:
 
 * `main` and `test` source directories
 * [Typesafe Config](https://github.com/typesafehub/config)
@@ -41,6 +41,11 @@ cd [PROJECT] && chmod 755 sbt
 ### 0.0.2
 
 * Added empty reference.conf to resources
+* Updated directory layout to use package name
+* Dependency updates:
+    * Scala 2.11.7
+    * SBT 0.13.11
+    * Latest sbt script from [paulp/sbt-extras](https://github.com/paulp/sbt-extras)
 
 ### 0.0.1
 
