@@ -14,9 +14,11 @@ resolvers ++= Seq(
 val TypesafeConfigVersion = "1.3.0"
 val ScalatestVersion = "2.2.4"
 val ScalacheckVersion = "1.12.4"
+val JodaConvertVersion = "1.7"
 
 libraryDependencies ++= Seq(
   "com.typesafe" %  "config" % TypesafeConfigVersion,
+  "org.joda" % "joda-convert" % JodaConvertVersion,
   "org.scalatest" %% "scalatest" % ScalatestVersion % "test",
   "org.scalacheck" %% "scalacheck" % ScalacheckVersion % "test"
 )
@@ -25,7 +27,7 @@ lazy val root = (project in file(".")).
   enablePlugins(BuildInfoPlugin).
   settings(
     buildInfoKeys := Seq[BuildInfoKey](name, version, scalaVersion, sbtVersion),
-    buildInfoPackage := "$organization$.$name;format="word,lower"$"
+    buildInfoPackage := "$organization$"
   )
 
 scalacOptions ++= Seq(
@@ -41,6 +43,6 @@ scalacOptions ++= Seq(
   "-Xfuture"
 )
 
-initialCommands := "import $organization$.$name;format="word,lower"$._"
+initialCommands := "import $organization$._"
 
 scalariformSettings
