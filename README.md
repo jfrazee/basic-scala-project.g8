@@ -41,10 +41,13 @@ cd [PROJECT] && chmod 755 sbt
 ### 0.0.2
 
 * Added empty reference.conf to resources
+* Added Coursier for dependency resolution
 * Updated directory layout to use package name
 * Dependency updates:
-    * Scala 2.11.7
-    * SBT 0.13.11
+    * Scala 2.11.8
+    * SBT 0.13.13
+    * SBT buildinfo 0.6.1
+    * Scalariform 1.6.0
     * Latest sbt script from [paulp/sbt-extras](https://github.com/paulp/sbt-extras)
 
 ### 0.0.1
