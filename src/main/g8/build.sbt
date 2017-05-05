@@ -11,10 +11,10 @@ resolvers ++= Seq(
   Resolver.mavenLocal
 )
 
-val TypesafeConfigVersion = "1.3.0"
-val ScalatestVersion = "2.2.4"
-val ScalacheckVersion = "1.12.4"
-val JodaConvertVersion = "1.7"
+val TypesafeConfigVersion = "1.3.1"
+val ScalatestVersion = "3.0.1"
+val ScalacheckVersion = "1.13.4"
+val JodaConvertVersion = "1.8"
 
 libraryDependencies ++= Seq(
   "com.typesafe" %  "config" % TypesafeConfigVersion,

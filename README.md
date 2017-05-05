@@ -38,6 +38,17 @@ cd [PROJECT] && chmod 755 sbt
 
 ## Changelog
 
+### 0.0.3
+
+* Removed paulp sbt script since verbatim is broken in giter8 for now
+* Dependency updates:
+    * Scala 2.12.2
+    * SBT 0.13.15
+    * Typesafe Config 1.3.1
+    * Scalatest 3.0.1
+    * Scalacheck 1.13.4
+    * Joda Convert 1.8
+
 ### 0.0.2
 
 * Added empty reference.conf to resources
