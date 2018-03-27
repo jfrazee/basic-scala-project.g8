@@ -4,14 +4,13 @@ A [giter8](https://github.com/n8han/giter8) template for generating a new Scala 
 
 ## Overview
 
-The giter8 template is configured for sbt 0.13.11 and scala 2.11.7 and includes:
+The giter8 template is configured for sbt 1.1.1 and scala 2.12.5 by default and includes:
 
 * `main` and `test` source directories
 * [Typesafe Config](https://github.com/typesafehub/config)
 * [ScalaTest](http://www.scalatest.org/)
 * [ScalaCheck](https://www.scalacheck.org)
 * [sbt-scalariform](https://github.com/sbt/sbt-scalariform)
-* [sbt-buildinfo](https://github.com/sbt/sbt-buildinfo)
 * [sbt-extras](https://github.com/paulp/sbt-extras) sbt build script
 * [Maven Central](http://search.maven.org), [Typesafe](https://bintray.com/typesafe) and [Sonatype](http://central.sonatype.org) resolvers
 
@@ -37,6 +36,16 @@ cd [PROJECT] && chmod 755 sbt
 ```
 
 ## Changelog
+
+### 0.0.4
+
+* Removed SBT buildinfo
+* Restored sbt script from [paulp/sbt-extras](https://github.com/paulp/sbt-extras)
+* Dependency updates:
+    * Scala 2.12.5
+    * SBT 1.1.1
+    * Scalariform 1.8.2
+    * Coursier 1.0.1
 
 ### 0.0.3
 

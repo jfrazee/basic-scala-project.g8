@@ -1,3 +1,5 @@
+import scalariform.formatter.preferences._
+
 name := "$name$"
 
 organization := "$organization$"
@@ -23,13 +25,6 @@ libraryDependencies ++= Seq(
   "org.scalacheck" %% "scalacheck" % ScalacheckVersion % "test"
 )
 
-lazy val root = (project in file(".")).
-  enablePlugins(BuildInfoPlugin).
-  settings(
-    buildInfoKeys := Seq[BuildInfoKey](name, version, scalaVersion, sbtVersion),
-    buildInfoPackage := "$organization$"
-  )
-
 scalacOptions ++= Seq(
   "-deprecation",
   "-encoding", "UTF-8",
@@ -44,5 +39,3 @@ scalacOptions ++= Seq(
 )
 
 initialCommands := "import $organization$._"
-
-scalariformSettings
